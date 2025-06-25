@@ -1,17 +1,43 @@
-# Network Traffic Analysis – DNS & ICMP Incident Response
+# 🛡️ Network Traffic Analysis – DNS & ICMP Incident Response
 
-## 📌 Overview
-This project simulates a real-world network troubleshooting scenario in which users were unable to access a website due to DNS resolution failure. As a cybersecurity analyst, I performed packet analysis using tcpdump and analyzed ICMP responses.
+## 📌 Project Overview
+This project investigates a DNS-related network issue where users received a **“destination port unreachable”** error. As a cybersecurity analyst, I used tcpdump and ICMP packet analysis to identify that the DNS server was not responding to queries.
 
-## 🛠️ Tools Used
+---
+
+## 🧰 Tools Used
 - tcpdump
-- ICMP/DNS Protocol Analysis
-- Linux Terminal
+- DNS / ICMP Protocol Analysis
+- Linux Command Line
+- Wireshark (planned)
 
-## 🚨 Summary
-Clients couldn’t access `www.yummyrecipesforme.com` due to a DNS error. The analysis revealed port 53 was unreachable, and ICMP error messages confirmed the DNS server was not responding.
+---
 
-## 💡 Key Learnings
-- DNS troubleshooting using packet analyzers
-- ICMP error interpretation
-- Incident report writing
+## 📊 Summary of Findings
+- DNS request to `www.yummyrecipesforme.com` failed on port 53
+- ICMP returned: **udp port 53 unreachable**
+- Likely causes:
+  - DNS server is down or unreachable
+  - Port 53 is blocked by a firewall
+  - Potential DNS DoS or cache poisoning attack
+
+---
+
+## 🧠 Key Learnings
+- Analyzing UDP/DNS failures
+- Reading ICMP response packets
+- Troubleshooting using packet analyzers
+
+---
+
+## 🖼️ Screenshots
+
+### DNS Packet Capture
+
+![DNS Error Screenshot](screenshots/screenshot.png)
+
+---
+
+## 📁 Files Included
+- `incident_report.md` – Full incident write-up
+- `README.md` – Summary and project breakdown
