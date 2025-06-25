@@ -34,7 +34,7 @@ This project investigates a DNS-related network issue where users received a **â
 
 ### DNS Packet Capture
 
-![DNS Error Screenshot](Screenshots/Screenshot.png)
+![DNS Error Screenshot](screenshots/Screenshot.png)
 
 ---
 
